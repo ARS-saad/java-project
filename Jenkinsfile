@@ -25,7 +25,8 @@ pipeline {
         stage('docker login and push image to docker hub') {
             steps {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-                sh 'docker push devopssteps/myapp:latest'
+                sh 'docker build -t 890iop/myapp:latest .'
+                sh 'docker push 890iop/myapp:latest'
             }
         }
     }
