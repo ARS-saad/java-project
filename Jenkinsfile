@@ -8,6 +8,7 @@ pipeline {
     environment {
         PATH = "/opt/maven/bin:$PATH"
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-user-pass')
+        GITHUB_TOKEN = credentials('github-token')
     }
 
     stages {
