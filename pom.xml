@@ -82,7 +82,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.devopssteps.DemoWorkshopApplication</mainClass>
+				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -102,7 +106,6 @@
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-					<!-- attached to Maven test phase -->
 					<execution>
 						<id>report</id>
 						<phase>test</phase>
@@ -117,8 +120,8 @@
 
 	<distributionManagement>
 		<repository>
-			<id>dev</id>
-			<url>file://jarstaging</url>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/YOUR_GITHUB_ORG_OR_USERNAME/YOUR_REPO_NAME</url>
 		</repository>
 	</distributionManagement>
 
