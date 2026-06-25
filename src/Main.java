@@ -15,6 +15,6 @@ public class Main {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello from DevOps CI/CD Pipeline 10";
+        return "oh yesh";
     }
 }
